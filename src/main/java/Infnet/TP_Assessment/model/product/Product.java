@@ -2,13 +2,15 @@ package Infnet.TP_Assessment.model.product;
 import java.time.OffsetDateTime;
 import Infnet.TP_Assessment.enums.TipoProduct;
 import Infnet.TP_Assessment.model.inventory.Inventory;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;
 
 public class Product {
 
 @Id
-@NotNull
+@GeneratedValue(strategy = GenerationType.IDENTITY)
 private Long ID;
 
 @NotNull
